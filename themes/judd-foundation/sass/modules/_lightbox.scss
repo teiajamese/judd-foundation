@@ -1,0 +1,67 @@
+//lightbox styles
+
+#jqlb_closelabel{
+	position:absolute;
+	top:10px;
+	background:none !important;
+	font-size: 1.2em;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: right;
+}
+#jqlb_closelabel:after{
+	content:"close";
+}
+#outerImageContainer{
+	margin-top:36px !important;
+	max-width:80%;
+	height: auto !important;
+	img{
+		height: auto !important;
+	}
+	@include breakpoint($mobile){
+		max-width:74%;
+	}
+}
+#imageDataContainer{
+	max-width:80%;
+	font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+	@include breakpoint($mobile){
+		max-width:74%;
+	}
+}
+#prevLink{
+	left: -9% !important;
+    position: absolute;
+    background: url("img/left_arrow.png") center center no-repeat !important;
+	width:52px !important;
+
+    	@include breakpoint($mobile){
+    		width:85px !important;
+    		background: url("img/left_arrow.png") left center no-repeat !important;
+
+
+    		left:-16% !important;
+    		position:absolute !important;
+    	}
+    }
+#nextLink{
+	right:-9% !important;
+	position:absolute;
+	background: url("img/right_arrow.png") center center no-repeat !important;
+	width:52px !important;
+    	@include breakpoint($mobile){
+    		width:85px !important;
+    		background: url("img/right_arrow.png") right center no-repeat !important;
+
+    		right:-16% !important;
+
+    		position:absolute !important;
+    	}
+}
+#hoverNav{
+	
+	@include breakpoint($mobile){
+		position:absolute !important;
+	}
+}

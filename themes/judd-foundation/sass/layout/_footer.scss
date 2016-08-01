@@ -1,0 +1,89 @@
+footer {
+	background-color: $black;
+	color: $white;
+	margin-top:3.5em;
+	padding-top: 1.5em;
+	padding-bottom: 2em;
+}
+
+footer a {
+	color: $white;
+	text-decoration:none;
+	&:hover{
+		text-decoration:underline;
+		color: $white;
+	}
+}
+
+.footer-container {
+	@include container;
+	width:90%;
+		@include breakpoint($mobile) {
+      		padding-left: 1em;
+      		padding-right: 1em;
+     }
+}
+
+.footer-left {
+	@include span(5 of 12);
+		@include breakpoint($mobile) {
+      		@include span(12);
+     }
+}
+
+.footer-right {
+	@include push (2);
+	@include span(4 of 12 last);
+		@include breakpoint($mobile) {
+      		@include span(12);
+     }
+}
+
+.footer-nav li {
+	display: inline-block;
+	list-style: none;
+	margin-right: 15px;
+	font-size: .8em;
+}
+
+footer a {
+	color: $white;
+}
+.global-foot-right-navigation {
+	text-align: right;
+	li:last-child {
+		padding-right: 0px;
+	}
+}
+
+.footer-container {
+	ul{
+		float: left;
+		width: 50%;
+		li{
+			display: inline-block;
+			padding: 0 2.6px;
+			font-size: 13px;
+			a:visited{
+				color:#fff;
+			}
+		}
+		li:first-child{
+			padding-left: 0px;
+		}
+	}
+	
+}
+
+@include breakpoint($mobile){
+	.footer-container{ 
+		text-align: center;
+		ul{
+			width: 100%;
+			float:none;
+		}
+		.global-foot-right-navigation{
+			text-align: center
+		}
+	}
+}

@@ -1,0 +1,64 @@
+header h1 {
+	font-size: 1.2em;
+	font-weight: 300;
+		@include breakpoint($mobile) {
+      	 font-size: 1.25em;         
+    }
+}
+
+.header-container {
+	@include container;
+	padding-top: 1.5em;
+	padding-bottom: .25em;
+		@include breakpoint($mobile) {
+      		padding: 0 1em;
+			
+    }
+}
+
+.header-left {
+	h1 a.parent-link{
+		color:#333;
+                background: none;
+                padding-left:4px;
+                text-decoration: none;
+	}
+	//@include span(3 of 12);
+	float:left;
+		@include breakpoint($mobile) {
+			@include span(9 of 12)
+	}
+	h1 a{
+        width: 120px;
+	text-decoration:none;
+        background-image:url('img/Judd_Logotype_288.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        text-indent: -99999px;
+        padding-left:50px;
+        span {
+            text-indent: -999999;
+            width: 60px;
+        }
+        
+	}
+}
+
+.header-right {
+	text-align:right;
+	margin-top:-5px;
+	@include span(1 of 12 last);
+	.fa-3x{
+		font-size:2em;
+		z-index:9;
+	}
+		@include breakpoint($mobile) {
+			@include push (0);
+			@include span(3 of 12 last);
+			margin-top:-6px;
+	}
+}
+header{
+	padding-top:17px;
+	height: 120px;
+}

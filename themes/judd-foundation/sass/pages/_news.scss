@@ -1,0 +1,24 @@
+/** News Page Styles ***/
+
+.page-template-page-list-view{
+	h2{
+	    padding-left: 19px;
+	    margin-bottom:3px;
+	}
+	p{
+		padding-left: 19px;
+	}
+	article{
+		margin:32px auto;
+	}
+	a{
+		//color:$link-color;
+	}
+}
+
+
+@media screen and (max-width:789px){
+	.page-template-page-list-view p, .page-template-page-list-view h2{
+	 	padding-left:0px;
+	}
+}
